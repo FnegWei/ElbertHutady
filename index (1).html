@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Elbert Hutady | BINUS Accounting - Finance Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF8F4;--card:#fff;--bd:#E7E2D9;--tx:#1C1B19;--mu:#6B675F;--ac:#0F5C4A;--acs:#E3EFE9;--tint:#DCE8E1;--on:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14130F;--card:#1D1B17;--bd:#2E2B25;--tx:#F1EEE7;--mu:#A39E93;--ac:#5CC4A4;--acs:#1E2B26;--on:#0c1a15}}
+:root[data-theme="dark"]{--bg:#14130F;--card:#1D1B17;--bd:#2E2B25;--tx:#F1EEE7;--mu:#A39E93;--ac:#5CC4A4;--acs:#1E2B26;--on:#0c1a15}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.2;margin:0}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+.lbl{color:var(--ac);font-weight:600;font-size:.85rem;margin:0 0 6px}
+h2{font-size:clamp(1.7rem,4vw,2.3rem)}
+.sub{color:var(--mu);max-width:560px;margin:10px 0 0}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--bd);padding-top:env(safe-area-inset-top,0px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:Fraunces,serif;font-weight:600;text-decoration:none;font-size:1.1rem}
+.links{display:flex;gap:22px;font-size:.92rem;color:var(--mu)}
+.links a{text-decoration:none}.links a:hover{color:var(--ac)}
+@media(max-width:760px){.links{display:none}}
+.btn{display:inline-block;padding:.65rem 1.15rem;border-radius:999px;font-weight:500;font-size:.92rem;text-decoration:none;border:1px solid var(--bd);background:var(--card);cursor:pointer;color:var(--tx);font-family:inherit;transition:.2s}
+.btn:hover{border-color:var(--ac);color:var(--ac)}
+.btn.p{background:var(--ac);color:var(--on);border-color:var(--ac)}.btn.p:hover{opacity:.88;color:var(--on)}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;padding-top:56px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.pic{order:-1;max-width:320px}}
+.hero h1{font-size:clamp(2.3rem,6vw,3.6rem)}
+.hero h1 em{color:var(--ac);font-style:normal}
+.hero p{font-size:1.1rem;color:var(--mu);margin:18px 0 0;max-width:30rem}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.pic{position:relative}
+.frame{background:var(--tint);border-radius:28px;overflow:hidden;aspect-ratio:1/1;transform:rotate(2deg);transition:.4s}
+.pic:hover .frame{transform:rotate(0)}
+.frame img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply;display:block}
+.status{position:absolute;left:-10px;bottom:-14px;background:var(--card);border:1px solid var(--bd);border-radius:999px;padding:.5rem .9rem;font-size:.82rem;display:flex;gap:8px;align-items:center;box-shadow:0 6px 18px #0001}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pl 2s infinite}
+@keyframes pl{50%{opacity:.35}}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:28px}
+.fact{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px 16px;cursor:default;transition:.2s}
+.fact:hover{transform:translateY(-3px);border-color:var(--ac)}
+.fact small{color:var(--mu);display:block;font-size:.78rem}.fact b{font-family:Fraunces,serif;font-size:1.05rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}
+.chip{border:1px solid var(--bd);background:var(--card);color:var(--mu);padding:.45rem .95rem;border-radius:999px;font:inherit;font-size:.88rem;cursor:pointer;transition:.2s}
+.chip:hover{color:var(--ac);border-color:var(--ac)}
+.chip.on{background:var(--ac);color:var(--on);border-color:var(--ac)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:22px;display:flex;flex-direction:column;cursor:pointer;transition:.25s;text-align:left;font:inherit;color:inherit}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px -14px #0003;border-color:var(--ac)}
+.card h3{font-size:1.2rem;margin:8px 0 4px}.card p{color:var(--mu);font-size:.93rem;margin:6px 0 14px;flex:1}
+.k{font-size:.78rem;color:var(--ac);font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:.74rem;background:var(--acs);color:var(--ac);border-radius:999px;padding:.2rem .65rem}
+.more{margin-top:16px;color:var(--ac);font-weight:500;font-size:.9rem}
+.alt{background:color-mix(in srgb,var(--card) 60%,var(--bg))}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.skill{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:.6rem 1rem;font-size:.93rem;animation:up .4s both}
+@keyframes up{from{opacity:0;transform:translateY(8px)}}
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:14px}
+.cert{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px}
+.cert.f{grid-column:1/-1;background:var(--acs);border-color:var(--ac)}
+.cert small{color:var(--mu)}.cert h4{margin:4px 0;font-family:Fraunces,serif;font-size:1.05rem}
+.lead{background:var(--card);border:1px solid var(--bd);border-radius:24px;padding:clamp(24px,5vw,48px)}
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin:24px 0}
+.nums div{border-left:3px solid var(--ac);padding-left:12px;color:var(--mu);font-size:.9rem}.nums b{display:block;font-family:Fraunces,serif;font-size:1.6rem;color:var(--tx)}
+#modal{position:fixed;inset:0;background:#0007;display:none;z-index:50;justify-content:flex-end}
+#modal.open{display:flex}
+#panel{width:min(560px,100%);height:100%;overflow:auto;background:var(--bg);padding:28px;animation:sl .3s}
+@keyframes sl{from{transform:translateX(30px);opacity:0}}
+#panel h4{color:var(--ac);font-size:.85rem;margin:22px 0 6px}
+#panel ul{padding-left:18px;color:var(--mu);margin:0}#panel li{margin-bottom:6px}
+.quote{background:var(--acs);border-radius:12px;padding:14px 16px}
+.x{float:right;background:none;border:0;font-size:1.8rem;color:var(--mu);cursor:pointer;line-height:1}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:36px}@media(max-width:760px){.contact{grid-template-columns:1fr}}
+input,textarea{width:100%;background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:.75rem;font:inherit;color:var(--tx);margin-bottom:10px}
+input:focus,textarea:focus{outline:2px solid var(--ac);border-color:transparent}
+.rv{opacity:0;transform:translateY(18px);transition:.6s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.frame{transform:none}.dot{animation:none}}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--ac);z-index:60}.links a.on{color:var(--ac);font-weight:600}.calc{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:22px;margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}@media(max-width:760px){.calc{grid-template-columns:1fr}}.calc label{display:flex;justify-content:space-between;font-size:.9rem;margin-top:12px}.calc input[type=range]{padding:0;margin:4px 0 0;accent-color:var(--ac);border:0;background:none}.big{font-family:Fraunces,serif;font-size:3.2rem;color:var(--ac);line-height:1}.cmp{height:12px;border-radius:99px;overflow:hidden;display:flex;margin:14px 0 6px;background:var(--bd)}.cmp i{display:block;transition:.3s}
+footer{padding:28px 0;color:var(--mu);font-size:.85rem;border-top:1px solid var(--bd);text-align:center}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+ <a class="logo" href="#top">Elbert Hutady</a>
+ <nav class="links"><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills &amp; Certifications</a><a href="#leadership">Leadership</a><a href="#contact">Contact</a></nav>
+ <div style="display:flex;gap:8px;align-items:center"><button class="btn" id="th" aria-label="Toggle dark mode" style="padding:.5rem .8rem">◐</button><a class="btn p" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1-Lc7EQ8uJ-7YoaKvhmFqZ4K6z2vNJPSj/view?usp=drive_link">Download CV</a></div>
+</div></header><div id="bar"></div>
+
+<main id="top">
+<section id="about" style="padding-top:0"><div class="wrap">
+ <div class="hero">
+  <div class="rv">
+   <p class="lbl">BINUS University · Bachelor of Accounting – Finance (5th Semester) · RIB</p>
+   <h1>Hi, I'm <em>Elbert</em>.<br>I like making sense of numbers.</h1>
+   <p>I'm a 5th-semester Accounting – Finance student at BINUS University. I spend most of my time on stock valuation, portfolio theory and business cases, and I also led our student association across three campuses. Have a look around.</p>
+   <div class="cta">
+    <a class="btn p" href="#projects">See my case studies</a>
+    <a class="btn" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1-Lc7EQ8uJ-7YoaKvhmFqZ4K6z2vNJPSj/view?usp=drive_link">Download CV</a>
+    <a class="btn" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1K_VU4bHVUwHlIPoDTGk7WYaJl5BHFdnS/view?usp=drive_link">Academic Transcript</a>
+   </div>
+  </div>
+  <div class="pic rv">
+   <div class="frame"><img src="elbert.jpg" alt="Elbert Hutady in a black suit and white shirt"></div>
+   <div class="status"><span class="dot"></span>Open to corporate finance &amp; consulting roles</div>
+  </div>
+ </div>
+ <div class="facts rv" id="facts"></div>
+</div></section>
+
+<section id="projects" class="alt"><div class="wrap">
+ <p class="lbl">Projects</p><h2>Things I've built and led</h2>
+ <p class="sub">Tap any card to see the context, how I approached it and what I found.</p>
+ <div class="chips" id="filters"></div>
+ <div class="grid" id="pgrid"></div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+ <p class="lbl">Skills &amp; Certifications</p><h2>What I bring to the table</h2>
+ <div class="chips" id="stabs"></div>
+ <div class="skills" id="sgrid"></div>
+ <div class="calc rv"><div><h3 style="font-size:1.3rem">Try it: WACC calculator</h3><p class="sub" style="font-size:.92rem">Valuation starts with the cost of capital. Drag the sliders to see how the mix of equity and debt changes it.</p>
+<label>Equity share <b id="vE"></b></label><input type="range" id="E" min="10" max="100" value="70">
+<label>Cost of equity <b id="vKe"></b></label><input type="range" id="Ke" min="5" max="25" step=".5" value="12.5">
+<label>Cost of debt <b id="vKd"></b></label><input type="range" id="Kd" min="2" max="15" step=".5" value="8">
+<label>Tax rate <b id="vT"></b></label><input type="range" id="T" min="0" max="40" value="22"></div>
+<div><small style="color:var(--mu)">Your WACC</small><div class="big" id="w">0%</div><div class="cmp"><i id="b1" style="background:var(--ac)"></i><i id="b2" style="background:#c9a227"></i></div><small style="color:var(--mu)" id="wn"></small><p style="font-size:.85rem;color:var(--mu);margin-top:14px">WACC = E% × Ke + D% × Kd × (1 − tax)</p></div></div>
+<h3 style="margin-top:48px;font-size:1.4rem">Certifications</h3>
+ <div class="certs" id="certs"></div>
+</div></section>
+
+<section id="leadership" class="alt"><div class="wrap">
+ <div class="lead rv">
+  <p class="lbl">Leadership</p><h2>General President, HIMA BINUS University</h2>
+  <p class="sub" style="max-width:640px">I led the university's accounting student body across three campuses, looking after budgets, programs and partnerships with firms like the Big 4, PwC and BCA.</p>
+  <div class="nums"><div><b>3</b>campuses: Kemanggisan, Alam Sutera, Bekasi</div><div><b>MSME</b>community empowerment workshops</div><div><b>SOPs</b>budget governance and accountability</div></div>
+  <button class="btn p" onclick="openP('hima-presidency')">Read the story</button>
+ </div>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+ <div>
+  <p class="lbl">Credentials &amp; Contact</p><h2>Let's talk</h2>
+  <p class="sub">Whether it's an opportunity, a project or just a question about my work, I'd be glad to hear from you. My full CV and academic transcript are open to view.</p>
+  <div class="cta">
+   <a class="btn p" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1-Lc7EQ8uJ-7YoaKvhmFqZ4K6z2vNJPSj/view?usp=drive_link">Official CV</a>
+   <a class="btn" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1K_VU4bHVUwHlIPoDTGk7WYaJl5BHFdnS/view?usp=drive_link">Academic Transcript</a>
+  </div>
+  <p style="margin-top:20px"><a id="li" target="_blank" rel="noopener" style="color:var(--ac)">LinkedIn ↗</a> &nbsp;·&nbsp; <a id="em" style="color:var(--ac)"></a> &nbsp; <button class="chip" id="cp">Copy email</button></p>
+ </div>
+ <div>
+  <input id="fn" placeholder="Your name" aria-label="Your name">
+  <input id="fe" type="email" placeholder="Your email" aria-label="Your email">
+  <textarea id="fm" rows="4" placeholder="What's on your mind?" aria-label="Message"></textarea>
+  <button class="btn p" id="send">Send message</button>
+ </div>
+</div>
+<footer style="margin-top:56px">© 2026 Elbert Hutady · BINUS University, Bachelor of Accounting – Finance</footer></section>
+</main>
+
+<div id="modal" role="dialog" aria-modal="true"><div id="panel"></div></div>
+
+<script>
+const EMAIL="elbert.work12@gmail.com",LINKEDIN="https://www.linkedin.com/in/elberthutady";
+const facts=[["Valuations I've built","NVIDIA, Intel, Gudang Garam"],["Studying","Accounting – Finance, Sem. 5"],["Leadership","Three-campus board"],["Toolkit","DCF, multiples, MPT"]];
+const cats={all:"All","fm":"Financial Modeling & Valuation","sa":"Strategic Advisory & Business Case","ld":"Leadership & Governance"};
+const P=[
+{id:"nvidia-intel-research",c:"fm",t:"NVIDIA vs. Intel: Semiconductor Valuation Research",s:"Comparative financial performance and the value of a technological moat",m:"DCF + EV/EBITDA",tags:["Equity Research","Semiconductors","Financial Analysis"],d:"A side-by-side look at capex efficiency, margin defensibility and growth in the AI-driven chip market.",ctx:"An in-depth valuation contrasting NVIDIA's data-center dominance with Intel's turnaround and foundry roadmap.",me:["Ratio benchmarking across profitability, liquidity and asset turnover.","Revenue segment breakdown: Data Center, Gaming, Client Computing.","Valuation using DCF scenarios and EV/EBITDA multiples."],ki:"ROIC and cash-flow conversion diverge sharply: CUDA software lock-in on one side, heavy foundry capex on the other.",u:"https://drive.google.com/drive/folders/1omllsMNPV8JsG1-cbTQLLm_VW4Z7awOu?usp=drive_link"},
+{id:"investment-portfolio-management",c:"fm",t:"Quantitative Portfolio Optimization",s:"Modern Portfolio Theory and risk-adjusted allocation",m:"Sharpe maximization",tags:["Portfolio Management","CAPM","Efficient Frontier"],d:"An optimization model that uses variance-covariance matrices to build the best risk-return portfolio.",ctx:"Simulated multi-asset equity allocations to compare risk-adjusted returns and alpha against a benchmark.",me:["Return distribution and volatility modeling.","Markowitz efficient frontier and Sharpe ratio maximization.","CAPM beta estimation and sensitivity stress tests."],ki:"Spreading weights across low-correlation sectors reduced drawdowns without giving up expected terminal wealth.",u:"https://drive.google.com/file/d/1Dget-HlOjoHPyn8Kf-ap6oie4NEL4bUa/view?usp=drive_link"},
+{id:"ggrm-valuation",c:"fm",t:"PT Gudang Garam Tbk (GGRM) Valuation",s:"UPH National Stock Valuation Competition",m:"FCFF + WACC",tags:["Equity Valuation","Tobacco / FMCG","Excise Tax"],d:"What is GGRM worth as excise duties rise, margins tighten and volumes shift?",ctx:"An analyst report and valuation model for the UPH Stock Valuation Competition on Indonesia's tobacco sector.",me:["Integrated 3-statement forecast and FCFF model.","WACC reflecting Indonesian sovereign risk premiums.","Scenario matrix: price increases versus consecutive excise hikes."],ki:"Investment recommendation with sensitivity ranges that show where margins tip.",u:"https://drive.google.com/file/d/1AkLoYaAfUP827zQVqFxr47qkffMSLzFO/view?usp=drive_link"},
+{id:"jejak-sustainability-case",c:"sa",t:"Jejak: Langkah Bersama Untuk Bumi",s:"An ESG business model for everyday consumers",m:"TAM-SAM-SOM",tags:["Business Case","ESG","Circular Economy"],d:"A tech-enabled sustainability idea that connects conscious consumers with verifiable environmental impact.",ctx:"A full commercialization and partnership plan around climate action and corporate carbon-offset accountability.",me:["Problem-solution fit and customer personas.","Unit economics, monetization tiers and market sizing.","Go-to-market plan with B2B sponsorships."],ki:"Gamified consumer engagement plus enterprise ESG compliance can add up to sustainable recurring revenue.",u:"https://drive.google.com/file/d/1GLNmlobbuilYp1Ld_7WOxjYuLAyvhxaj/view?usp=drive_link"},
+{id:"bbca-business-case",c:"sa",t:"BBCA to the Moon: Banking Strategy",s:"BCA Business Case Competition",m:"Multi-year IRR",tags:["Commercial Banking","Digital Ecosystem","Fintech"],d:"A growth strategy for customer acquisition and product financing at Bank Central Asia.",ctx:"A scalable growth plan submitted to the BBCA Business Case Competition to expand BCA's transaction and financing footprint.",me:["Macro view and competitive review of Indonesian banking.","Product lifecycle, value proposition canvas and roadmap.","Feasibility: CapEx, OpEx, CAC and multi-year IRR."],ki:"Pair BCA's low-cost CASA funding strength with high-engagement digital platforms.",u:"https://drive.google.com/drive/folders/1ndSgLT1dHGtdJ8fUW4ntnnrRLuzaM9FW?usp=drive_link"},
+{id:"hima-presidency",c:"ld",t:"General President, HIMA BINUS University",s:"Governance, cross-campus operations and financial stewardship",m:"3 campuses",tags:["Leadership","Budgeting","Partnerships"],d:"Ran operations across Kemanggisan, Alam Sutera and Bekasi, from budgets to partnerships.",ctx:"I led the university's accounting student body, running multi-stakeholder programs, financial tournaments and community initiatives.",me:["Set up SOPs, financial governance and budget accountability.","Oversaw national events, Big 4 networking lunches and MSME empowerment workshops.","Coordinated teams and resources across three campuses."],ki:"Connected academic learning with real corporate readiness and raised the organization's reputation and discipline.",u:"https://drive.google.com/drive/folders/1LN6GXH2KUsTvORIJHtvrqloi16NUdfnL?usp=drive_link"}];
+const S={"Corporate Finance":["DCF (FCFF/FCFE)","DDM","Trading & transaction multiples","WACC & cost of capital","3-statement modeling","Sensitivity & scenarios"],"Portfolio & Quant":["Modern Portfolio Theory","CAPM & beta","Efficient frontier","Sharpe ratio maximization","Correlation matrices","Risk-return benchmarking"],"Strategy":["Market sizing (TAM/SAM/SOM)","Unit economics","Go-to-market","ESG integration","Cost-benefit analysis","C-suite presentations"],"Tools":["Advanced Excel (Index/Match, dynamic arrays)","Python & R","Financial econometrics","Financial databases","ERP & accounting systems"]};
+const C=[["Registered Investment Banker (RIB)","LSP Pasar Modal (Indonesia)","Oct 2026",1],["Microsoft Excel Course: Foundation to Mastery","Professional credential","Apr 2026"],["TOEFL Junior Academic","ETS","Dec 2023"],["Microsoft Office Specialist","Microsoft","Jul 2022"]];
+const $=s=>document.querySelector(s);
+$("#facts").innerHTML=facts.map(f=>`<div class="fact"><small>${f[0]}</small><b>${f[1]}</b></div>`).join("");
+let cur="all";
+function drawP(){
+ $("#filters").innerHTML=Object.entries(cats).map(([k,v])=>`<button class="chip ${k==cur?'on':''}" data-k="${k}">${v}</button>`).join("");
+ $("#pgrid").innerHTML=P.filter(p=>cur=="all"||p.c==cur).map(p=>`<button class="card" onclick="openP('${p.id}')"><span class="k">${p.m}</span><h3>${p.t}</h3><span style="color:var(--mu);font-size:.88rem">${p.s}</span><p>${p.d}</p><div class="tags">${p.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div><span class="more">View deep dive →</span></button>`).join("");
+ document.querySelectorAll("#filters .chip").forEach(b=>b.onclick=()=>{cur=b.dataset.k;drawP()});
+}
+function openP(id){const p=P.find(x=>x.id==id);
+ $("#panel").innerHTML=`<button class="x" onclick="closeP()" aria-label="Close">×</button><p class="k">${cats[p.c]}</p><h3 style="font-size:1.6rem;margin-top:6px">${p.t}</h3><p style="color:var(--mu)">${p.s}</p>
+ <h4>Context</h4><p style="margin:0">${p.ctx}</p><h4>How I approached it</h4><ul>${p.me.map(x=>`<li>${x}</li>`).join("")}</ul>
+ <h4>What I found</h4><div class="quote">${p.ki}</div><div class="tags" style="margin-top:18px">${p.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+ <p style="margin-top:24px"><a class="btn p" target="_blank" rel="noopener" href="${p.u}">Open the full work on Google Drive ↗</a></p>`;
+ $("#modal").classList.add("open");document.body.style.overflow="hidden";}
+function closeP(){$("#modal").classList.remove("open");document.body.style.overflow=""}
+$("#modal").onclick=e=>{if(e.target.id=="modal")closeP()};document.onkeydown=e=>{if(e.key=="Escape")closeP()};
+let st=Object.keys(S)[0];
+function drawS(){
+ $("#stabs").innerHTML=Object.keys(S).map(k=>`<button class="chip ${k==st?'on':''}" data-k="${k}">${k}</button>`).join("");
+ $("#sgrid").innerHTML=S[st].map((x,i)=>`<span class="skill" style="animation-delay:${i*50}ms">${x}</span>`).join("");
+ document.querySelectorAll("#stabs .chip").forEach(b=>b.onclick=()=>{st=b.dataset.k;drawS()});
+}
+$("#certs").innerHTML=C.map(c=>`<div class="cert ${c[3]?'f':''}"><small>${c[3]?'Featured credential · ':''}${c[2]}</small><h4>${c[0]}</h4><small>${c[1]}</small></div>`).join("");
+$("#li").href=LINKEDIN;$("#em").href="mailto:"+EMAIL;$("#em").textContent=EMAIL;
+$("#cp").onclick=async e=>{try{await navigator.clipboard.writeText(EMAIL);e.target.textContent="Copied ✓"}catch(x){e.target.textContent="Select it above"}};
+$("#send").onclick=()=>{const n=$("#fn").value,e=$("#fe").value,m=$("#fm").value;location.href=`mailto:${EMAIL}?subject=${encodeURIComponent("Hello from "+n)}&body=${encodeURIComponent(m+"\n\n"+n+" ("+e+")")}`};
+drawP();drawS();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+
+const q=id=>document.getElementById(id);
+function wacc(){const E=+q("E").value,Ke=+q("Ke").value,Kd=+q("Kd").value,T=+q("T").value,D=100-E;
+ q("vE").textContent=E+"% equity / "+D+"% debt";q("vKe").textContent=Ke+"%";q("vKd").textContent=Kd+"%";q("vT").textContent=T+"%";
+ const w=E/100*Ke+D/100*Kd*(1-T/100);q("w").textContent=w.toFixed(2)+"%";q("b1").style.width=E+"%";q("b2").style.width=D+"%";
+ q("wn").textContent=D>50?"Heavy on debt: cheaper money, but more financial risk.":E==100?"All equity: no tax shield from debt.":"A balanced capital structure.";}
+["E","Ke","Kd","T"].forEach(i=>q(i).oninput=wacc);wacc();
+q("th").onclick=()=>{const d=document.documentElement,dark=getComputedStyle(d).getPropertyValue("--bg").trim()=="#14130F";d.setAttribute("data-theme",dark?"light":"dark")};
+const secs=[...document.querySelectorAll("section[id]")],lk=[...document.querySelectorAll(".links a")];
+addEventListener("scroll",()=>{const h=document.documentElement;q("bar").style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%";
+ let cur="";secs.forEach(x=>{if(x.getBoundingClientRect().top<140)cur=x.id});lk.forEach(a=>a.classList.toggle("on",a.getAttribute("href")=="#"+cur))},{passive:true});
+</script>
+</body>
+</html>
